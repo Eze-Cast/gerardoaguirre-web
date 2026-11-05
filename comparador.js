@@ -403,7 +403,27 @@ notice.className = 'compare-notice';
 notice.setAttribute('role', 'status');
 notice.hidden = true;
 document.body.append(notice);
-$('#inventoryStats').innerHTML = '';
+const totalBrands = new Set(INVENTARIO.map((c) => c.brand)).size;
+const min = Math.min(...INVENTARIO.map((c) => c.price));
+const years = INVENTARIO.map((c) => c.year);
+$('#inventoryStats').innerHTML = /* HTML */ `
+  <div>
+    <strong>${INVENTARIO.length}</strong>
+    <span>Autos en esta selección</span>
+  </div>
+  <div>
+    <strong>${totalBrands}</strong>
+    <span>Marcas para elegir</span>
+  </div>
+  <div>
+    <strong>${money(min)}</strong>
+    <span>Precio de lista desde · MXN</span>
+  </div>
+  <div>
+    <strong>${Math.min(...years)}–${Math.max(...years)}</strong>
+    <span>Años modelo</span>
+  </div>
+`;
 const gridObserver = new MutationObserver(() =>
   document.querySelectorAll('#grid [data-compare]').forEach((b) => {
     const selected = compared.includes(Number(b.dataset.compare));

@@ -87,7 +87,7 @@ function renderInventory() {
           `
         )
         .join('')
-    : '<p class="empty">El inventario estará disponible próximamente.</p>';
+    : '<p class="empty">No encontramos autos con esos filtros. Prueba otra marca o limpia la búsqueda.</p>';
 }
 $('#filters').addEventListener('submit', (e) => e.preventDefault());
 ['search', 'brand', 'category', 'sort'].forEach((id) =>
