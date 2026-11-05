@@ -1,0 +1,447 @@
+/* Preferencias visuales y acciones de inventario. Se carga después de styles.css. */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border: 1px solid #91c1ac44;
+  border-radius: 50%;
+  color: #218359;
+  background: transparent;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.theme-toggle:hover {
+  background: #baedd733;
+  border-color: #7dc0a3;
+}
+.theme-toggle svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.theme-toggle .theme-sun {
+  display: none;
+}
+[data-theme='dark'] .theme-toggle .theme-moon {
+  display: none;
+}
+[data-theme='dark'] .theme-toggle .theme-sun {
+  display: block;
+}
+.theme-toggle:focus-visible,
+.card-trade-in:focus-visible,
+.detail-trade-in:focus-visible {
+  outline: 2px solid #42c78d;
+  outline-offset: 4px;
+}
+
+/* Comparar es una acción visible con un área cómoda para tocar. */
+header nav > a[href='#comparar'] {
+  font-size: 14px;
+  font-weight: 600;
+}
+.compare-toggle,
+.card .compare-toggle {
+  font-size: 15px;
+  font-weight: 600;
+  min-height: 44px;
+}
+.card .compare-toggle {
+  width: 100%;
+  justify-content: flex-start;
+  border-bottom: 1px solid #e5f4ee;
+  margin: 9px 0 0;
+  padding: 13px 0;
+}
+.compare-toggle[aria-pressed='true'] {
+  color: #12ac69;
+}
+#comparisonContent {
+  scroll-margin-top: 24px;
+}
+.card-contact-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.card-contact-row .card-wa {
+  width: auto;
+  flex-shrink: 0;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  justify-content: flex-start;
+  min-height: 48px;
+}
+.card-trade-in {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  color: #509979;
+  font-size: 10px;
+  line-height: 1.5;
+  min-height: 44px;
+  max-width: 150px;
+}
+.card-trade-in span,
+.detail-trade-in span {
+  font-size: 18px;
+}
+.card-trade-in:hover,
+.detail-trade-in:hover {
+  color: #12ac69;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.detail-trade-in {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: #509979;
+  min-height: 44px;
+}
+.detail-actions .compare-toggle {
+  flex-basis: 100%;
+  justify-content: flex-start;
+  padding: 4px 0;
+}
+
+/* Las redes forman un solo apartado reconocible junto al asesor. */
+.advisor-socials {
+  margin-top: 32px;
+  padding-top: 27px;
+  border-top: 1px solid #b7ddcd;
+}
+.advisor-socials h3 {
+  font-family: Manrope, Arial, sans-serif;
+  font-size: clamp(20px, 2vw, 26px);
+  font-weight: 600;
+  letter-spacing: -0.6px;
+  line-height: 1.4;
+  margin: 0;
+}
+.advisor-socials > p {
+  color: #61967f;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 10px 0 20px;
+}
+.social-platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.advisor-socials .social-link {
+  margin: 0;
+  padding: 17px 18px;
+  border: 1px solid #c7e9da;
+  border-radius: 8px;
+  background: #ffffff66;
+  flex: 1;
+  min-width: 190px;
+  font-size: 14px;
+  gap: 12px;
+}
+.advisor-socials .social-link svg {
+  width: 29px;
+  height: 29px;
+}
+.advisor-socials .social-link small {
+  font-size: 11px;
+}
+.advisor-socials .social-link b {
+  margin-left: auto;
+}
+.advisor-socials .social-link:hover {
+  transform: translateY(-2px);
+  border-color: #79cba7;
+  background: #fff;
+}
+
+/* Tema oscuro: superficies y texto, sin invertir las fotografías de los coches. */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --navy: #e0f8ee;
+  --blue: #80f1c0;
+  --muted: #a0c9b7;
+  --line: #2a5040;
+  --night-bg: #0a1c14;
+  --night-panel: #102c20;
+  --night-raised: #173b2b;
+  --night-text: #e0f8ee;
+  --night-secondary: #a0c9b7;
+  --night-accent: #88f2c4;
+  --night-line: #2a5040;
+}
+[data-theme='dark'] body {
+  background: var(--night-bg);
+  color: var(--night-text);
+}
+[data-theme='dark'] .inventory {
+  background: linear-gradient(180deg, #0a2117, #0d291d 75%, #0a2117);
+}
+[data-theme='dark'] .filters {
+  background: #153c2b;
+  border-color: var(--night-line);
+}
+[data-theme='dark'] .picker-option {
+  background: var(--night-panel);
+  border-color: var(--night-line);
+}
+[data-theme='dark'] .picker-option:hover:not(:disabled) {
+  background: #1b4b36;
+}
+[data-theme='dark'] .inventory-stats span,
+[data-theme='dark'] .results,
+[data-theme='dark'] .compare-table thead span,
+[data-theme='dark'] .compare-table td small,
+[data-theme='dark'] .comparison-toolbar {
+  color: var(--night-secondary);
+}
+[data-theme='dark'] .results button {
+  color: var(--night-accent);
+}
+[data-theme='dark'] header {
+  border-color: var(--night-line);
+}
+[data-theme='dark'] .logo img,
+[data-theme='dark'] .footer-name img {
+  filter: brightness(0) invert(0.94);
+}
+[data-theme='dark'] .hero {
+  background: radial-gradient(ellipse at 80% 45%, #16573b, transparent 70%), #0a2117;
+}
+[data-theme='dark'] .hero-glow {
+  background: #1b724c;
+  opacity: 0.3;
+}
+[data-theme='dark'] .hero-aura {
+  background: radial-gradient(ellipse, #278a5f55, transparent 68%);
+}
+[data-theme='dark'] .hero-brand-curtain {
+  opacity: 0.08;
+}
+[data-theme='dark'] .curtain-logo img {
+  filter: brightness(0) invert(1);
+}
+[data-theme='dark'] .hero-copy h1,
+[data-theme='dark'] h2,
+[data-theme='dark'] .card h3,
+[data-theme='dark'] .price {
+  color: var(--night-text);
+}
+[data-theme='dark'] h1 em,
+[data-theme='dark'] h2 em,
+[data-theme='dark'] .eyebrow {
+  color: var(--night-accent);
+}
+[data-theme='dark'] .button {
+  background: #24a36c;
+  color: #fff;
+}
+[data-theme='dark'] .button:hover {
+  background: #30b97e;
+}
+[data-theme='dark'] .nav-contact,
+[data-theme='dark'] .theme-toggle {
+  color: var(--night-text);
+  border-color: #65ab8d66;
+}
+[data-theme='dark'] #navCompareCount {
+  background: #205b41;
+  color: #c4ffe5;
+}
+[data-theme='dark'] .brand-strip,
+[data-theme='dark'] .ticker,
+[data-theme='dark'] .closing {
+  background: #103223;
+  color: #e0f8ee;
+}
+[data-theme='dark'] .comparison,
+[data-theme='dark'] .card,
+[data-theme='dark'] .detail-body,
+[data-theme='dark'] .full-specs,
+[data-theme='dark'] .map-label,
+[data-theme='dark'] #detail,
+[data-theme='dark'] #vehiclePicker,
+[data-theme='dark'] .filter-popover {
+  background: var(--night-panel);
+  color: var(--night-text);
+  border-color: var(--night-line);
+}
+[data-theme='dark'] .advisor,
+[data-theme='dark'] .location {
+  background: #102e21;
+}
+[data-theme='dark'] .trade-in {
+  background: linear-gradient(110deg, #14432f, #103324);
+  border-color: var(--night-line);
+}
+[data-theme='dark'] .compare-slot,
+[data-theme='dark'] .compare-empty,
+[data-theme='dark'] .picker-search,
+[data-theme='dark'] .vehicle-detail,
+[data-theme='dark'] .vehicle-gallery,
+[data-theme='dark'] .detail-specs span,
+[data-theme='dark'] .full-specs .spec-list > div,
+[data-theme='dark'] .spec-unit-note {
+  background: var(--night-raised);
+  color: var(--night-secondary);
+  border-color: var(--night-line);
+}
+[data-theme='dark'] .compare-slot:hover,
+[data-theme='dark'] .picker-option:hover,
+[data-theme='dark'] .filter-options button:hover,
+[data-theme='dark'] .spec-tabs button:hover {
+  background: #1b4b36;
+}
+[data-theme='dark'] .filter-trigger,
+[data-theme='dark'] .filters input,
+[data-theme='dark'] #pickerSearch {
+  background: var(--night-raised) !important;
+  color: var(--night-text);
+  border-color: var(--night-line) !important;
+}
+[data-theme='dark'] input::placeholder {
+  color: #9fc8b6;
+}
+[data-theme='dark'] .filter-options button,
+[data-theme='dark'] .vehicle-picker-trigger,
+[data-theme='dark'] .picker-option,
+[data-theme='dark'] .picker-heading h2,
+[data-theme='dark'] .spec-panel h4,
+[data-theme='dark'] .full-specs .spec-list dd {
+  color: var(--night-text);
+}
+[data-theme='dark'] .filter-options button[aria-selected='true'],
+[data-theme='dark'] .spec-tabs button[aria-selected='true'],
+[data-theme='dark'] .highlight-cell {
+  color: #b0ffdd;
+  background: #1b583e;
+  border-color: #317457;
+}
+[data-theme='dark'] .filter-options img,
+[data-theme='dark'] .filter-trigger > img {
+  filter: brightness(0) invert(0.85);
+}
+[data-theme='dark'] .compare-table thead th {
+  background: var(--night-panel);
+}
+[data-theme='dark'] .compare-table tbody th {
+  background: var(--night-raised);
+  color: #c3e7d7;
+}
+[data-theme='dark'] .compare-table th,
+[data-theme='dark'] .compare-table td,
+[data-theme='dark'] .card-bottom,
+[data-theme='dark'] .card .compare-toggle,
+[data-theme='dark'] .inventory-stats,
+[data-theme='dark'] .steps > div,
+[data-theme='dark'] .spec-tabs,
+[data-theme='dark'] .equipment-list li,
+[data-theme='dark'] .spec-source,
+[data-theme='dark'] .advisor-socials,
+[data-theme='dark'] footer {
+  border-color: var(--night-line);
+}
+[data-theme='dark'] .hero-copy > p:not(.eyebrow),
+[data-theme='dark'] .section-heading > p,
+[data-theme='dark'] .advisor-copy > p:not(.eyebrow),
+[data-theme='dark'] .trade-in p:not(.eyebrow),
+[data-theme='dark'] .location-copy > p:not(.eyebrow),
+[data-theme='dark'] .location address,
+[data-theme='dark'] .card-year,
+[data-theme='dark'] .specs,
+[data-theme='dark'] .price small,
+[data-theme='dark'] .inventory-note,
+[data-theme='dark'] .compare-status,
+[data-theme='dark'] .spec-source,
+[data-theme='dark'] .full-specs .spec-list dt,
+[data-theme='dark'] .spec-tabs button,
+[data-theme='dark'] .compare-empty p,
+[data-theme='dark'] .advisor-socials > p,
+[data-theme='dark'] .picker-option small,
+[data-theme='dark'] .vehicle-picker-trigger small,
+[data-theme='dark'] .slot-label,
+[data-theme='dark'] .social-link small {
+  color: var(--night-secondary);
+}
+[data-theme='dark'] .compare-toggle,
+[data-theme='dark'] .card-wa,
+[data-theme='dark'] .card-trade-in,
+[data-theme='dark'] .detail-trade-in,
+[data-theme='dark'] .social-link,
+[data-theme='dark'] .trade-in-hero,
+[data-theme='dark'] .footer-instagram,
+[data-theme='dark'] .compare-details,
+[data-theme='dark'] .slot-remove,
+[data-theme='dark'] .picker-arrow,
+[data-theme='dark'] .comparison-toolbar button,
+[data-theme='dark'] .spec-source a,
+[data-theme='dark'] .location-actions > a:not(.button),
+[data-theme='dark'] .map-label b {
+  color: var(--night-accent);
+}
+[data-theme='dark'] .advisor-socials .social-link {
+  background: #17402e;
+  border-color: #336b53;
+}
+[data-theme='dark'] .advisor-socials .social-link:hover {
+  background: #20563f;
+}
+[data-theme='dark'] .close-dialog,
+[data-theme='dark'] #closePicker,
+[data-theme='dark'] .remove-compare {
+  color: var(--night-text);
+  background: #204b38;
+}
+[data-theme='dark'] .advisor-photo > span,
+[data-theme='dark'] .badge {
+  background: #123b29ec;
+  color: #e0f8ee;
+}
+[data-theme='dark'] footer {
+  background: var(--night-bg);
+  color: var(--night-secondary);
+}
+@media (max-width: 650px) {
+  header nav > a[href='#comparar'] {
+    font-size: 12px;
+  }
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+  }
+  header nav {
+    gap: 9px;
+  }
+  .card-contact-row {
+    gap: 8px;
+  }
+  .card-contact-row .card-wa {
+    font-size: 13px;
+  }
+  .card-trade-in {
+    font-size: 11px;
+  }
+  .advisor-socials .social-link {
+    min-width: 150px;
+    padding: 15px 12px;
+  }
+  .advisor-socials h3 {
+    font-size: 22px;
+  }
+  .detail-trade-in {
+    max-width: 155px;
+  }
+}

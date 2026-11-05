@@ -1,0 +1,9 @@
+{
+  "name": "gerardo-aguirre-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gerardo Aguirre · Seminuevos multimarca",
+  "scripts": {
+    "check": "node validar-inventario.cjs"
+  }
+}

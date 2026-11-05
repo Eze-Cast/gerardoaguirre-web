@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <script>
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      history.replaceState(null, '', location.pathname + location.search + '#inicio');
+      document.documentElement.classList.add('boot');
+      addEventListener(
+        'DOMContentLoaded',
+        () => {
+          scrollTo({ top: 0, left: 0, behavior: 'instant' });
+          requestAnimationFrame(() => {
+            scrollTo({ top: 0, left: 0, behavior: 'instant' });
+            requestAnimationFrame(() => document.documentElement.classList.remove('boot'));
+          });
+        },
+        { once: true }
+      );
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#103c2e" />
+    <title>Gerardo Aguirre | Seminuevos multimarca</title>
+    <meta
+      name="description"
+      content="Encuentra tu próximo seminuevo con Gerardo Aguirre. Explora Volkswagen y una selección multimarca, y conoce las próximas novedades."
+    />
+    <link rel="canonical" href="https://gerardoaguirre.com.mx/" />
+    <link rel="icon" href="assets/ga-monograma.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css?v=20261105-preferencias" />
+    <link rel="stylesheet" href="preferencias.css?v=20261105-1" />
+    
+  <link rel="stylesheet" href="identidad.css" />
+</head>
+  <body>
+    <header>
+      <a class="logo" href="#inicio" aria-label="Gerardo Aguirre, inicio">
+        <img
+          src="assets/gerardo-aguirre-logo.svg"
+          alt="Gerardo Aguirre · Asesor automotriz"
+          width="260"
+          height="65"
+        />
+      </a>
+      <nav aria-label="Principal">
+        <a href="#inventario">Inventario</a>
+        <a href="#comparar">
+          Comparar
+          <span id="navCompareCount">0</span>
+        </a>
+        <a href="#asesor">Tu asesor</a>
+        <a href="#ubicacion">Ubicación</a>
+        
+        
+      </nav>
+    </header>
+    <main>
+      <section class="hero-track" id="inicio">
+        <div class="hero">
+          <div class="hero-glow"></div>
+          <div class="hero-copy">
+            <p class="eyebrow">SEMINUEVOS VOLKSWAGEN & MULTIMARCA</p>
+            <h1>
+              Tu siguiente
+              <br />
+              gran
+              <em>historia.</em>
+            </h1>
+            <p>
+              Empieza con un auto que va contigo.
+              <br />
+              Encuéntralo con atención personal, de principio a fin.
+            </p>
+            <a class="trade-in-hero" href="#auto-a-cuenta">
+              <span>↔</span>
+              Tomamos tu auto a cuenta
+            </a>
+            <a class="button" href="#inventario">
+              Explorar inventario
+              <span>↗</span>
+            </a>
+          </div>
+          <div class="stage editorial-car-stage brand-stage" aria-label="Gerardo Aguirre"><img class="hero-monogram" src="assets/ga-monograma.svg" alt="GA" width="460" height="460" /><span class="brand-stage-label">GERARDO AGUIRRE</span></div><div class="hero-bottom">
+            <span>UN NUEVO CAMINO COMIENZA AQUÍ.</span>
+            <a href="#inventario">DESLIZA PARA DESCUBRIR ↓</a>
+            <span>ATENCIÓN DIRECTA, CONTIGO.</span>
+          </div>
+        </div>
+      </section>
+      <section class="brands" aria-label="Marcas de seminuevos">
+        <p class="eyebrow">SEMINUEVOS MULTIMARCA</p>
+        <div class="ticker">
+          <div class="brand-track">
+            <div class="brand-group">
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/volkswagen.webp"
+                  alt="Volkswagen"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/cupra.webp"
+                  alt="CUPRA"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/audi.webp"
+                  alt="Audi"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/bmw.webp"
+                  alt="BMW"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/byd.webp"
+                  alt="BYD"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/chevrolet.webp"
+                  alt="Chevrolet"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/dodge.webp"
+                  alt="Dodge"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/honda.webp"
+                  alt="Honda"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/hyundai.webp"
+                  alt="Hyundai"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/jeep.webp"
+                  alt="Jeep"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img src="assets/marcas/mg.webp" alt="MG" width="120" height="48" loading="lazy" />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/mazda.webp"
+                  alt="Mazda"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/mitsubishi.webp"
+                  alt="Mitsubishi"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/nissan.webp"
+                  alt="Nissan"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/peugeot.webp"
+                  alt="Peugeot"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/seat.webp"
+                  alt="SEAT"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/suzuki.webp"
+                  alt="Suzuki"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/toyota.webp"
+                  alt="Toyota"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="brand-group" aria-hidden="true">
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/volkswagen.webp"
+                  alt="Volkswagen"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/cupra.webp"
+                  alt="CUPRA"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/audi.webp"
+                  alt="Audi"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/bmw.webp"
+                  alt="BMW"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/byd.webp"
+                  alt="BYD"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/chevrolet.webp"
+                  alt="Chevrolet"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/dodge.webp"
+                  alt="Dodge"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/honda.webp"
+                  alt="Honda"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/hyundai.webp"
+                  alt="Hyundai"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/jeep.webp"
+                  alt="Jeep"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img src="assets/marcas/mg.webp" alt="MG" width="120" height="48" loading="lazy" />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/mazda.webp"
+                  alt="Mazda"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/mitsubishi.webp"
+                  alt="Mitsubishi"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/nissan.webp"
+                  alt="Nissan"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/peugeot.webp"
+                  alt="Peugeot"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/seat.webp"
+                  alt="SEAT"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/suzuki.webp"
+                  alt="Suzuki"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+              <div class="brand-logo">
+                <img
+                  src="assets/marcas/toyota.webp"
+                  alt="Toyota"
+                  width="120"
+                  height="48"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="inventory section" id="inventario">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">SEMINUEVOS SELECCIONADOS PARA TI</p>
+            <h2>
+              Encuentra tu
+              <br />
+              <em>próximo camino.</em>
+            </h2>
+          </div>
+          <p>
+            De la ciudad a la siguiente aventura.
+            <br />
+            Explora nuestros seminuevos destacados.
+          </p>
+        </div>
+        <div class="inventory-stats" id="inventoryStats"></div>
+        <form class="filters" id="filters">
+          <label>
+            Buscar
+            <input id="search" type="search" placeholder="Modelo o marca" />
+          </label>
+          <label>
+            Marca
+            <select id="brand">
+              <option value="">Todas las marcas</option>
+            </select>
+          </label>
+          <label>
+            Estilo
+            <select id="category">
+              <option value="">Todos los estilos</option>
+              <option>SUV</option>
+              <option>Deportivo</option>
+              <option>Pickup</option>
+              <option>Comercial</option>
+              <option>Sedán / Hatchback</option>
+            </select>
+          </label>
+          <label>
+            Ordenar
+            <select id="sort">
+              <option value="featured">Selección destacada</option>
+              <option value="low">Menor precio</option>
+              <option value="high">Mayor precio</option>
+              <option value="year">Más recientes</option>
+            </select>
+          </label>
+        </form>
+        <div class="results">
+          <span id="count" aria-live="polite"></span>
+          <button id="reset" type="button">Limpiar filtros ↺</button>
+        </div>
+        <div class="grid" id="grid"></div>
+        <p class="inventory-note">
+          Precios de lista en MXN, sujetos a cambio y disponibilidad. Confirma con el asesor el
+          precio final, los impuestos aplicables y las condiciones de cada unidad.
+        </p>
+      </section>
+      <section class="trade-in section" id="auto-a-cuenta">
+        <div class="trade-symbol" aria-hidden="true">↔</div>
+        <div>
+          <p class="eyebrow">DA EL SIGUIENTE PASO</p>
+          <h2>
+            Tomamos tu auto
+            <br />
+            <em>a cuenta.</em>
+          </h2>
+          <p>
+            Tu auto actual puede ser el comienzo del siguiente.
+            <br />
+            Cuéntame qué manejas y agenda una valuación.
+          </p>
+        </div>
+        
+      </section>
+      <section class="comparison section" id="comparar" tabindex="-1">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">ELIGE CON MÁS CLARIDAD</p>
+            <h2>
+              Tus favoritos,
+              <br />
+              <em>frente a frente.</em>
+            </h2>
+          </div>
+          <p>
+            Compara hasta tres seminuevos.
+            <br />
+            Revisa sus datos y elige el que va contigo.
+          </p>
+        </div>
+        <div class="comparison-toolbar">
+          <span>Selecciona hasta 3 autos</span>
+          <button type="button" id="clearComparison" disabled>Limpiar comparación ↺</button>
+        </div>
+        <div class="compare-selectors" id="compareSelectors"></div>
+        <p class="compare-status" id="compareStatus" role="status" aria-live="polite">
+          Selecciona al menos dos vehículos para comparar.
+        </p>
+        <div id="comparisonContent"></div>
+        <p class="inventory-note">
+          Los datos de cada unidad provienen del inventario. Las especificaciones de fábrica se
+          muestran cuando hay una ficha oficial verificada; confirma el equipamiento instalado con
+          el asesor.
+        </p>
+      </section>
+      <section class="advisor section" id="asesor">
+        <div class="advisor-photo reveal blank-photo" aria-label="Espacio para fotografía"><img src="assets/ga-monograma.svg" alt="" width="180" height="180" /></div><div class="advisor-copy reveal">
+          <p class="eyebrow">EL AUTO IMPORTA. EL TRATO TAMBIÉN.</p>
+          <h2>
+            Una decisión grande.
+            <br />
+            <em>Una atención cercana.</em>
+          </h2>
+          <p class="profile-description" data-pending="biografia"></p>
+          <div class="steps">
+            <div>
+              <b>01</b>
+              <span>Cuéntame qué buscas</span>
+            </div>
+            <div>
+              <b>02</b>
+              <span>Conoce tus opciones</span>
+            </div>
+            <div>
+              <b>03</b>
+              <span>Agenda una visita</span>
+            </div>
+          </div>
+          
+          <div class="advisor-socials" data-pending="redes"></div>
+</div>
+      </section>
+      <section class="location section" id="ubicacion"><div class="location-copy"><p class="eyebrow">CONOCE TU PRÓXIMO AUTO</p><h2>Nos vemos<br/><em>pronto.</em></h2><address data-pending="direccion"></address><div class="location-actions" data-pending="mapa"></div></div><div class="location-map blank-map" aria-label="Espacio para ubicación"></div></section><section class="closing" id="contacto">
+        <p class="eyebrow">TU SIGUIENTE AUTO ESTÁ MÁS CERCA</p>
+        <h2>¿Lo encontramos?</h2>
+        
+      </section>
+    </main>
+    <footer>
+      <a class="footer-name" href="#inicio">
+        <img src="assets/gerardo-aguirre-logo.svg" alt="Gerardo Aguirre" width="210" height="53" />
+      </a>
+      <p>Asesor automotriz · Seminuevos multimarca</p>
+      
+      <small>Las marcas mencionadas pertenecen a sus respectivos titulares.</small>
+      <span>
+        ©
+        <span id="year"></span>
+        Gerardo Aguirre
+      </span>
+    </footer>
+    
+    <dialog id="detail">
+      <button class="close-dialog" id="closeDialog" aria-label="Cerrar ficha">✕</button>
+      <div id="detailContent"></div>
+    </dialog>
+    <script src="inventario.js?v=20261105-preferencias"></script>
+    <script src="contacto.js"></script>
+    <script src="app.js?v=20261105-preferencias"></script>
+    <script src="filtros.js?v=20261105-inventario"></script>
+    <script src="fichas-tecnicas.js?v=20261105-inventario"></script>
+    <script src="comparador.js?v=20261105-preferencias"></script>
+  </body>
+</html>
