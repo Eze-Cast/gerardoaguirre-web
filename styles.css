@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
 /* 01. Paleta, tipografía y estructura general */
 :root {
-  --navy: #085031;
-  --blue: #12ac69;
-  --muted: #618676;
-  --line: #dbece5;
+  --navy: #0e2e20;
+  --blue: #1f6345;
+  --muted: #465750;
+  --line: #e0e7e4;
   --p: 0;
 }
 * {
@@ -51,7 +51,7 @@ header {
   position: absolute;
   inset: 0 0 auto;
   z-index: 10;
-  border-bottom: 1px solid #08503115;
+  border-bottom: 1px solid #0e2e2015;
 }
 .logo {
   font-family: Manrope, Arial, sans-serif;
@@ -65,7 +65,7 @@ header {
 .logo > span {
   font-size: 12px;
   letter-spacing: 2px;
-  border-left: 1px solid #9cbeaf;
+  border-left: 1px solid #668578;
   padding-left: 13px;
 }
 .logo small {
@@ -82,7 +82,7 @@ nav {
   font-size: 13px;
 }
 .nav-contact {
-  border: 1px solid #165d3e;
+  border: 1px solid #173729;
   padding: 12px 20px;
   border-radius: 3px;
 }
@@ -96,7 +96,7 @@ nav {
   position: sticky;
   top: 0;
   overflow: hidden;
-  background: linear-gradient(115deg, #f5fcf9 35%, #d6f4e7);
+  background: linear-gradient(115deg, #f7faf9 35%, #deece6);
   display: flex;
   align-items: center;
   padding: 95px 5% 65px;
@@ -107,7 +107,7 @@ nav {
   width: 65vw;
   height: 65vw;
   border-radius: 50%;
-  background: #b6f4d9;
+  background: #c7e3d7;
   filter: blur(100px);
   opacity: 0.35;
   right: -15%;
@@ -140,7 +140,7 @@ h1 {
 }
 em {
   font-style: normal;
-  color: #30b67c;
+  color: #316c52;
 }
 .hero-copy > p:not(.eyebrow) {
   font-size: 15px;
@@ -184,7 +184,7 @@ em {
   font-weight: 800;
   letter-spacing: -5px;
   font-size: 7vw;
-  color: #1c946020;
+  color: #21563f20;
   white-space: nowrap;
   transform: translateX(calc(var(--p) * -100px));
 }
@@ -192,11 +192,11 @@ em {
   position: absolute;
   inset: 13% 0 10%;
   border-radius: 10px;
-  box-shadow: 0 40px 65px #14563930;
+  box-shadow: 0 40px 65px #15332630;
   transform: none;
   will-change: transform;
   overflow: hidden;
-  background: #e0f2ea;
+  background: #e5ede9;
 }
 .car-frame > img {
   width: 100%;
@@ -209,7 +209,7 @@ em {
   content: '';
   position: absolute;
   inset: 40% 0 0;
-  background: linear-gradient(transparent, #032315c9);
+  background: linear-gradient(transparent, #06140ec9);
   pointer-events: none;
 }
 .car-caption {
@@ -240,7 +240,7 @@ em {
 .orbit {
   position: absolute;
   inset: 5% -8%;
-  border: 1px solid #7fd2ae50;
+  border: 1px solid #4f967750;
   border-radius: 50%;
   transform: rotate(-25deg);
   animation: none;
@@ -273,7 +273,7 @@ em {
 .ticker {
   overflow: hidden;
   background: var(--navy);
-  color: #d0eee1;
+  color: #d8e6e0;
   padding: 24px 0;
   font-size: 12px;
   letter-spacing: 4px;
@@ -325,7 +325,7 @@ h2 {
   font-size: 13px;
   color: var(--navy);
   padding: 9px 5px;
-  border-bottom: 1px solid #c8e2d7;
+  border-bottom: 1px solid #cfdbd6;
   outline-offset: 3px;
 }
 .results {
@@ -348,7 +348,7 @@ h2 {
 }
 .card {
   background: #fff;
-  border: 1px solid #e2efe9;
+  border: 1px solid #e6ebe9;
   border-radius: 6px;
   overflow: hidden;
   transition:
@@ -359,11 +359,11 @@ h2 {
 }
 .card:hover {
   transform: translateY(-7px);
-  box-shadow: 0 18px 35px #12563912;
+  box-shadow: 0 18px 35px #14322612;
 }
 .card-photo {
   border: 0;
-  background: #e5f4ee;
+  background: #e9f0ed;
   padding: 0;
   width: 100%;
   position: relative;
@@ -394,7 +394,7 @@ h2 {
   position: absolute;
   bottom: 12px;
   right: 12px;
-  background: #09492dc9;
+  background: #0e2a1ec9;
   color: white;
   padding: 5px 8px;
   border-radius: 3px;
@@ -446,7 +446,7 @@ h2 {
 }
 .view-car {
   background: none;
-  border: 1px solid #c7e5d8;
+  border: 1px solid #cfddd7;
   border-radius: 50%;
   width: 38px;
   height: 38px;
@@ -466,7 +466,7 @@ h2 {
   margin-top: 35px;
 }
 .advisor {
-  background: #eaf7f1;
+  background: #eef3f1;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 9%;
@@ -508,12 +508,12 @@ h2 {
 .steps > div {
   display: flex;
   gap: 20px;
-  border-bottom: 1px solid #cde8dc;
+  border-bottom: 1px solid #d4e1db;
   padding: 16px 0;
   font-size: 13px;
 }
 .steps b {
-  color: #45b685;
+  color: #3c6e59;
   font-size: 11px;
 }
 .closing {
@@ -531,7 +531,7 @@ h2 {
 .closing > a {
   display: inline-block;
   font-size: 22px;
-  border-bottom: 1px solid #77b79b;
+  border-bottom: 1px solid #527b69;
   padding-bottom: 10px;
 }
 .closing:before {
@@ -574,12 +574,12 @@ footer small {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: #0a734c;
+  background: #134230;
   color: white;
   border: 1px solid #ffffff40;
   padding: 13px 18px;
   border-radius: 30px;
-  box-shadow: 0 6px 24px #00272235;
+  box-shadow: 0 6px 24px #05161435;
   font-size: 12px;
   transition: transform 0.3s;
 }
@@ -602,7 +602,7 @@ dialog {
   overscroll-behavior: contain;
 }
 dialog::backdrop {
-  background: #022a19c9;
+  background: #061810c9;
   backdrop-filter: blur(8px);
 }
 .close-dialog {
@@ -621,7 +621,7 @@ dialog::backdrop {
   width: 100%;
   height: 440px;
   object-fit: contain;
-  background: #e9f4ef;
+  background: #ecf1ef;
 }
 .thumbs {
   display: flex;
@@ -665,7 +665,7 @@ dialog::backdrop {
   gap: 12px;
 }
 .detail-specs span {
-  background: #eef8f4;
+  background: #f1f5f3;
   padding: 10px 14px;
   font-size: 12px;
 }
@@ -686,7 +686,7 @@ dialog::backdrop {
   transform: none;
 }
 :focus-visible {
-  outline: 3px solid #43d797;
+  outline: 3px solid #378865;
   outline-offset: 4px;
 }
 @keyframes rise {
@@ -960,24 +960,24 @@ dialog::backdrop {
 }
 /* Portada con vehículo recortado y profundidad al desplazarse. */
 :root {
-  --sky: #dcfff0;
-  --ice: #edfff7;
-  --steel: #70ac92;
-  --royal: #17b26f;
-  --deep: #043e25;
+  --sky: #e6f5ef;
+  --ice: #f2faf6;
+  --steel: #507163;
+  --royal: #226749;
+  --deep: #0a2318;
   --mouse-x: 0;
   --mouse-y: 0;
 }
 .hero {
   background:
-    radial-gradient(ellipse at 78% 48%, #baf8dd 0, transparent 47%),
-    linear-gradient(115deg, #f6fffb 24%, #e7fff5 55%, #c8f4e1);
+    radial-gradient(ellipse at 78% 48%, #cbe7db 0, transparent 47%),
+    linear-gradient(115deg, #f8fdfb 24%, #eef8f4 55%, #d4e8df);
 }
 .hero-copy {
   width: 41%;
 }
 .hero-copy .eyebrow {
-  color: #39ac7a;
+  color: #346751;
 }
 .stage {
   left: 42%;
@@ -988,7 +988,7 @@ dialog::backdrop {
 .giant-type {
   font-size: 7vw;
   top: 0;
-  color: #239e6919;
+  color: #265d4519;
   letter-spacing: -5px;
 }
 .car-frame {
@@ -1006,7 +1006,7 @@ dialog::backdrop {
 .car-frame > img {
   object-fit: contain;
   object-position: center;
-  filter: drop-shadow(0 25px 14px #1368431b);
+  filter: drop-shadow(0 25px 14px #173d2c1b);
   animation: car-fade-in 0.8s ease-out both;
   transform: scale(calc(1 + var(--p) * 0.025));
   transform-origin: 50% 65%;
@@ -1018,13 +1018,13 @@ dialog::backdrop {
   transform: translateZ(20px);
 }
 .car-caption > span {
-  color: #48aa80;
+  color: #3d6855;
 }
 .car-caption strong {
   font-size: 24px;
 }
 .car-caption small {
-  color: #60977f;
+  color: #486056;
 }
 .ground-shadow {
   position: absolute;
@@ -1033,26 +1033,26 @@ dialog::backdrop {
   top: 68%;
   height: 15%;
   border-radius: 50%;
-  background: radial-gradient(ellipse, #12623f40, transparent 65%);
+  background: radial-gradient(ellipse, #16392a40, transparent 65%);
   transform: rotate(-5deg);
   opacity: 0.8;
 }
 .orbit {
-  border-color: #5dcf9e30;
+  border-color: #428a6b30;
 }
 .stage-tag {
-  color: #48aa80;
+  color: #3d6855;
   bottom: -2%;
 }
 .brands {
-  background: linear-gradient(110deg, #064e2f, #106b44, #0b5a38);
+  background: linear-gradient(110deg, #0d2c1f, #163e2d, #113425);
   padding: 29px 0 23px;
   color: white;
 }
 .brands > .eyebrow {
   text-align: center;
   font-size: 9px;
-  color: #a9e9cd;
+  color: #bbd7cb;
   letter-spacing: 3px;
   margin-bottom: 15px;
 }
@@ -1093,59 +1093,59 @@ dialog::backdrop {
   transform: scale(1.1);
 }
 .inventory {
-  background: linear-gradient(180deg, #f6fffb, #f0fcf7 75%, #f8fffc);
+  background: linear-gradient(180deg, #f8fdfb, #f3f9f6 75%, #fafdfc);
 }
 .filters {
-  background: #e8fbf380;
+  background: #edf6f280;
   padding: 23px 20px;
-  border: 1px solid #d1f2e4;
+  border: 1px solid #dae9e3;
   border-radius: 5px;
 }
 .card:nth-child(3n + 2) {
-  border-color: #cdf1e1;
+  border-color: #d7e7e0;
 }
 .card-year {
-  color: #4dac83;
+  color: #406a58;
 }
 .badge {
-  color: #178f5b;
-  background: #edfff7f2;
+  color: #1e533c;
+  background: #f2faf6f2;
 }
 .card-bottom {
-  border-color: #dbf5ea;
+  border-color: #e2eee9;
 }
 .view-car {
-  background: #eafcf4;
-  color: #1ca469;
-  border-color: #c8f3e0;
+  background: #eff7f3;
+  color: #235f45;
+  border-color: #d4e7df;
 }
 .advisor {
-  background: linear-gradient(130deg, #dbf8eb, #effff8 62%, #d3f8e8);
+  background: linear-gradient(130deg, #e3f0ea, #f3fbf7 62%, #ddeee7);
 }
 .steps b {
-  color: #17b26f;
+  color: #226749;
 }
 .closing {
   background:
-    radial-gradient(ellipse at 10% 100%, #1a915d, transparent 65%),
-    linear-gradient(110deg, #054a2c, #107248);
+    radial-gradient(ellipse at 10% 100%, #20543d, transparent 65%),
+    linear-gradient(110deg, #0c2a1d, #17422f);
 }
 .button {
-  background: linear-gradient(100deg, #0c6c42, #17aa6a);
-  box-shadow: 0 6px 17px #0a865017;
+  background: linear-gradient(100deg, #143e2b, #216246);
+  box-shadow: 0 6px 17px #164c3417;
 }
 .button:hover {
-  background: linear-gradient(100deg, #14975e, #23cd83);
+  background: linear-gradient(100deg, #1d573e, #2c7756);
 }
 .hero-bottom {
-  color: #4e9375;
+  color: #3d5c4e;
 }
 #detail {
   scrollbar-width: thin;
-  scrollbar-color: #8ecbb1 #edfcf6;
+  scrollbar-color: #599179 #f1f8f5;
 }
 .detail-body {
-  background: linear-gradient(#fff, #f1fdf8);
+  background: linear-gradient(#fff, #f4faf7);
 }
 @keyframes car-arrive {
   from {
@@ -1486,7 +1486,7 @@ dialog::backdrop {
   width: 95%;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: radial-gradient(circle, #bbf5dc4d, transparent 65%);
+  background: radial-gradient(circle, #cbe5da4d, transparent 65%);
   pointer-events: none;
 }
 .vw-ring {
@@ -1494,7 +1494,7 @@ dialog::backdrop {
   width: 88%;
   max-width: 420px;
   aspect-ratio: 1;
-  border: 1px solid #47a17a12;
+  border: 1px solid #3b635212;
   border-radius: 50%;
 }
 .ring-inner {
@@ -1514,7 +1514,7 @@ dialog::backdrop {
 }
 .vw-signature p {
   font-size: 12px;
-  color: #609880;
+  color: #486156;
   margin-top: 12px;
 }
 .vw-micro {
@@ -1522,7 +1522,7 @@ dialog::backdrop {
   bottom: -5%;
   font-size: 8px;
   letter-spacing: 2px;
-  color: #6da98f;
+  color: #4f6e61;
 }
 .hero-bottom {
   letter-spacing: 1.4px;
@@ -1540,7 +1540,7 @@ header nav {
   justify-content: center;
   min-width: 20px;
   height: 20px;
-  background: #d9fbec;
+  background: #e2f2eb;
   border-radius: 50%;
   font-size: 10px;
   margin-left: 4px;
@@ -1561,7 +1561,7 @@ header nav {
   height: auto;
   font-size: 18px;
   padding: 8px;
-  color: #4b9f7b;
+  color: #3d6252;
   transition: transform 0.25s;
 }
 .view-car:hover {
@@ -1575,16 +1575,16 @@ header nav {
   font-size: 11px;
   background: transparent;
   border: 0;
-  color: #5a927a;
+  color: #445d52;
   padding: 12px 0;
   min-height: 43px;
   transition: color 0.2s;
 }
 .compare-toggle:hover {
-  color: #12ac69;
+  color: #1f6345;
 }
 .compare-toggle[aria-pressed='true'] {
-  color: #12ac69;
+  color: #1f6345;
   font-weight: 600;
 }
 .card .compare-toggle {
@@ -1600,16 +1600,16 @@ header nav {
   margin-top: 7px;
   padding: 12px 0;
   font-size: 11px;
-  color: #1d8f5e;
+  color: #21543e;
 }
 .card-wa:hover {
-  color: #0c6c42;
+  color: #143e2b;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 25px #1256390a;
+  box-shadow: 0 12px 25px #1432260a;
 }
 .card h3 {
   font-weight: 500;
@@ -1622,7 +1622,7 @@ header nav {
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
   padding: 26px 0 32px;
-  border-top: 1px solid #d5efe4;
+  border-top: 1px solid #dce8e3;
 }
 .inventory-stats > div {
   display: flex;
@@ -1637,13 +1637,13 @@ header nav {
 }
 .inventory-stats span {
   font-size: 10px;
-  color: #6e9886;
+  color: #4f635a;
 }
 /* Comparador editorial: imágenes pequeñas y columnas contenidas */
 /* 02. Comparador y fichas técnicas */
 .comparison {
   background: #fff;
-  border-top: 1px solid #e2f3ec;
+  border-top: 1px solid #e7eeeb;
 }
 .comparison .section-heading {
   margin-bottom: 35px;
@@ -1659,7 +1659,7 @@ header nav {
   gap: 12px;
   padding: 19px 20px;
   background: #f6fcf9;
-  border: 1px solid #e0f1ea;
+  border: 1px solid #e5ece9;
   border-radius: 4px;
   min-width: 0;
 }
@@ -1667,33 +1667,33 @@ header nav {
   font-size: 9px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #6f9c89;
+  color: #50665c;
 }
 .compare-selectors select {
   background: transparent;
-  color: #166040;
+  color: #18382a;
   font-size: 13px;
   max-width: 100%;
   width: 100%;
   padding: 9px 15px 9px 0;
   border: 0;
-  border-bottom: 1px solid #cce7db;
+  border-bottom: 1px solid #d3e0da;
   outline-offset: 5px;
   min-height: 40px;
 }
 .compare-status {
   font-size: 11px;
   line-height: 1.8;
-  color: #6f9c89;
+  color: #50665c;
   margin: 23px 0;
 }
 .comparison-scroll {
   width: 100%;
   overflow-x: auto;
-  border: 1px solid #e0f1ea;
+  border: 1px solid #e5ece9;
   border-radius: 5px;
   scrollbar-width: thin;
-  scrollbar-color: #9ed1bb #f4fcf9;
+  scrollbar-color: #acc3b9 #f6faf8;
   animation: panel-enter 0.4s ease-out;
 }
 .compare-table {
@@ -1713,8 +1713,8 @@ header nav {
 .compare-table th,
 .compare-table td {
   padding: 20px 24px;
-  border-bottom: 1px solid #e7f4ee;
-  border-right: 1px solid #e7f4ee;
+  border-bottom: 1px solid #ebf0ee;
+  border-right: 1px solid #ebf0ee;
   vertical-align: top;
   font-size: 12px;
   line-height: 1.7;
@@ -1731,7 +1731,7 @@ header nav {
   font-size: 10px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: #7ca493;
+  color: #566d64;
 }
 .compare-table thead img {
   width: 100%;
@@ -1744,7 +1744,7 @@ header nav {
 }
 .compare-table thead span {
   font-size: 9px;
-  color: #7ba593;
+  color: #566e64;
   letter-spacing: 1px;
 }
 .compare-table h3 {
@@ -1758,18 +1758,18 @@ header nav {
   font-weight: 500;
   font-size: 11px;
   background: #f8fcfa;
-  color: #65927e;
+  color: #4a5e55;
 }
 .compare-table td small {
   display: block;
   font-size: 9px;
   line-height: 1.5;
-  color: #51a681;
+  color: #416756;
   margin-top: 5px;
 }
 .compare-table .highlight-cell {
-  background: #f0fdf7;
-  color: #189861;
+  background: #f4f9f7;
+  color: #205840;
   font-weight: 600;
 }
 .remove-compare {
@@ -1778,19 +1778,19 @@ header nav {
   top: 8px;
   border: 0;
   background: transparent;
-  color: #8ab2a1;
+  color: #5d7a6e;
   padding: 6px;
   font-size: 12px;
   min-width: 32px;
   min-height: 32px;
 }
 .remove-compare:hover {
-  color: #177a4f;
+  color: #1b4734;
 }
 .compare-details {
   border: 0;
   background: none;
-  color: #2eaf77;
+  color: #2f684f;
   font-size: 10px;
   padding: 8px 0;
   min-height: 34px;
@@ -1799,22 +1799,22 @@ header nav {
   padding: 11px 15px;
   font-size: 11px;
   box-shadow: none;
-  background: #eefbf5;
-  color: #228b5e;
-  border: 1px solid #d2efe2;
+  background: #f2f7f5;
+  color: #24523e;
+  border: 1px solid #dae7e1;
 }
 .compare-table .button:hover {
-  background: #dcf8ec;
+  background: #e4f0eb;
 }
 .compare-empty {
   padding: 45px 20px;
   text-align: center;
-  border: 1px dashed #cfebdf;
+  border: 1px dashed #d7e3de;
   border-radius: 4px;
   background: #fafefc;
 }
 .compare-empty > span {
-  color: #8ccbb0;
+  color: #589179;
   font-size: 25px;
   font-weight: 400;
 }
@@ -1825,14 +1825,14 @@ header nav {
 }
 .compare-empty p {
   font-size: 12px;
-  color: #7da292;
+  color: #576c63;
   line-height: 1.8;
 }
 .compare-empty a {
   display: inline-block;
   margin-top: 14px;
   font-size: 12px;
-  color: #36a977;
+  color: #32654f;
 }
 .compare-notice {
   position: fixed;
@@ -1840,13 +1840,13 @@ header nav {
   left: 50%;
   transform: translateX(-50%);
   z-index: 40;
-  background: #12603e;
+  background: #163829;
   color: #fff;
   border-radius: 5px;
   padding: 16px 22px;
   font-size: 12px;
   max-width: 90vw;
-  box-shadow: 0 8px 30px #08503125;
+  box-shadow: 0 8px 30px #0e2e2025;
 }
 .compare-notice[hidden] {
   display: none;
@@ -1863,7 +1863,7 @@ header nav {
 .vehicle-gallery {
   position: sticky;
   top: 0;
-  background: #eef9f4;
+  background: #f1f6f4;
   padding-top: 0;
 }
 .detail-main {
@@ -1894,7 +1894,7 @@ header nav {
   margin: 32px 0 15px;
 }
 .spec-section {
-  border-top: 1px solid #d8efe5;
+  border-top: 1px solid #dee9e4;
 }
 .spec-section summary {
   cursor: pointer;
@@ -1911,7 +1911,7 @@ header nav {
   content: '+';
   position: absolute;
   right: 3px;
-  color: #5da787;
+  color: #47695b;
   font-size: 16px;
   top: 15px;
 }
@@ -1931,10 +1931,10 @@ header nav {
   gap: 15px;
   padding: 10px 0;
   font-size: 11px;
-  border-top: 1px solid #e5f4ee;
+  border-top: 1px solid #e9f0ed;
 }
 .spec-list dt {
-  color: #759c8b;
+  color: #53675e;
 }
 .spec-list dd {
   margin: 0;
@@ -1950,20 +1950,20 @@ header nav {
 .equipment-list li {
   padding: 9px 0 9px 17px;
   font-size: 11px;
-  color: #568d75;
+  color: #41594f;
   position: relative;
 }
 .equipment-list li:before {
   content: '·';
   position: absolute;
   left: 3px;
-  color: #3dbb84;
+  color: #387058;
 }
 .pending-spec,
 .spec-source {
   font-size: 11px;
   line-height: 1.9;
-  color: #7ba191;
+  color: #566b62;
   margin: 0 0 20px;
 }
 .spec-source {
@@ -1971,7 +1971,7 @@ header nav {
   font-size: 10px;
 }
 .spec-source a {
-  color: #31b079;
+  color: #306950;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -2008,7 +2008,7 @@ nav > a:not(.nav-contact):after {
   bottom: -7px;
   right: 0;
   height: 1px;
-  background: #52b98c;
+  background: #42745e;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.25s;
@@ -2281,7 +2281,7 @@ nav > a:hover:after {
 /* 03. Selector visual de vehículos */
 .compare-slot {
   min-width: 0;
-  border: 1px solid #dff2ea;
+  border: 1px solid #e4ede9;
   border-radius: 5px;
   background: #f8fefb;
   padding: 17px 16px;
@@ -2291,13 +2291,13 @@ nav > a:hover:after {
 }
 .compare-slot:focus-within,
 .compare-slot:hover {
-  border-color: #b8e7d3;
-  background: #f0fdf7;
+  border-color: #c5dad1;
+  background: #f4f9f7;
 }
 .slot-label {
   font-size: 8px;
   letter-spacing: 1.5px;
-  color: #7fac99;
+  color: #587468;
 }
 .vehicle-picker-trigger {
   display: flex;
@@ -2307,7 +2307,7 @@ nav > a:hover:after {
   padding: 15px 0 0;
   border: 0;
   background: none;
-  color: #14603f;
+  color: #17382a;
   gap: 12px;
   min-height: 70px;
 }
@@ -2331,21 +2331,21 @@ nav > a:hover:after {
 .vehicle-picker-trigger small {
   font-size: 9px;
   display: block;
-  color: #7aa894;
+  color: #557064;
   margin-top: 3px;
 }
 .picker-arrow {
   font-size: 17px;
-  color: #4b9e7a;
+  color: #3d6252;
 }
 .slot-plus {
   width: 43px;
   height: 43px;
-  border: 1px dashed #bfe6d5;
+  border: 1px dashed #cadbd4;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #66ba96;
+  color: #4a7a65;
   font-size: 23px;
   font-weight: 400;
   flex-shrink: 0;
@@ -2357,7 +2357,7 @@ nav > a:hover:after {
   padding: 0;
   border-radius: 8px;
   background: #fff;
-  color: #12603e;
+  color: #163829;
   overflow: auto;
 }
 .picker-heading {
@@ -2377,9 +2377,9 @@ nav > a:hover:after {
   letter-spacing: -1px;
 }
 .picker-heading button {
-  background: #f3fbf8;
+  background: #f5f9f7;
   border: 0;
-  color: #66a087;
+  color: #4c675b;
   border-radius: 50%;
   width: 38px;
   height: 38px;
@@ -2391,15 +2391,15 @@ nav > a:hover:after {
   padding: 0 28px 17px;
   background: white;
   z-index: 1;
-  border-bottom: 1px solid #e3f5ed;
+  border-bottom: 1px solid #e8f0ec;
 }
 .picker-search input {
   width: 100%;
-  border: 1px solid #dbf1e7;
+  border: 1px solid #e1ebe6;
   border-radius: 4px;
   background: #f7fdfa;
   font-size: 14px;
-  color: #12603e;
+  color: #163829;
   padding: 14px 16px;
 }
 .picker-results {
@@ -2410,18 +2410,18 @@ nav > a:hover:after {
   width: 100%;
   padding: 14px 6px;
   border: 0;
-  border-bottom: 1px solid #e8f5ef;
+  border-bottom: 1px solid #ecf1ef;
   background: white;
   text-align: left;
   gap: 17px;
   align-items: center;
-  color: #196041;
+  color: #19392b;
   transition:
     background 0.2s,
     transform 0.2s;
 }
 .picker-option:hover:not(:disabled) {
-  background: #f1fcf7;
+  background: #f4f9f7;
   transform: translateX(3px);
 }
 .picker-option > img {
@@ -2443,7 +2443,7 @@ nav > a:hover:after {
 }
 .picker-option small {
   font-size: 10px;
-  color: #85ae9c;
+  color: #5b766a;
   display: block;
   margin: 6px 0 9px;
 }
@@ -2454,11 +2454,11 @@ nav > a:hover:after {
 .picker-option em {
   font-style: normal;
   font-size: 8px;
-  color: #85ae9c;
+  color: #5b766a;
 }
 .pick-check {
   font-size: 11px;
-  color: #4eb186;
+  color: #416d5a;
   flex-shrink: 0;
 }
 .picker-option:disabled {
@@ -2469,7 +2469,7 @@ nav > a:hover:after {
   padding: 25px;
   text-align: center;
   font-size: 12px;
-  color: #7aa894;
+  color: #557064;
 }
 @media (max-width: 650px) {
   .vehicle-picker-trigger > img {
@@ -2549,7 +2549,7 @@ nav > a:hover:after {
 .hero-model-label {
   font-size: 8px;
   letter-spacing: 3px;
-  color: #7fbaa0;
+  color: #567f6d;
   margin: 0 0 26px 7%;
 }
 .editorial-car-shadow {
@@ -2559,7 +2559,7 @@ nav > a:hover:after {
   height: 9%;
   top: 70%;
   border-radius: 50%;
-  background: radial-gradient(ellipse, #237e5730, transparent 65%);
+  background: radial-gradient(ellipse, #234b3a30, transparent 65%);
 }
 .editorial-caption {
   display: flex;
@@ -2568,7 +2568,7 @@ nav > a:hover:after {
   gap: 8px 15px;
   margin: 28px 4% 0 9%;
   padding-top: 15px;
-  border-top: 1px solid #79c7a52a;
+  border-top: 1px solid #508a712a;
 }
 .editorial-caption > span {
   font-size: 10px;
@@ -2576,12 +2576,12 @@ nav > a:hover:after {
 }
 .editorial-caption small {
   font-size: 10px;
-  color: #7fad99;
+  color: #577568;
 }
 .editorial-caption a {
   font-size: 10px;
   margin-left: auto;
-  color: #3cac7b;
+  color: #366852;
 }
 .hero-glow {
   transform: none;
@@ -2631,9 +2631,9 @@ nav > a:hover:after {
   font-size: 11px;
   line-height: 1.8;
   padding: 15px 16px;
-  background: #edfcf6;
-  border-left: 2px solid #a7e0c7;
-  color: #5d957d;
+  background: #f1f8f5;
+  border-left: 2px solid #b7d0c5;
+  color: #465f54;
   border-radius: 2px;
   margin: 23px 0;
 }
@@ -2663,7 +2663,7 @@ nav > a:hover:after {
   width: 90%;
   height: 90%;
   inset: 5%;
-  background: radial-gradient(ellipse, #b6fbdd7a, transparent 68%);
+  background: radial-gradient(ellipse, #c9e8db7a, transparent 68%);
   border-radius: 50%;
   animation: aura-intro 1.8s ease-out both;
   z-index: 0;
@@ -2674,7 +2674,7 @@ nav > a:hover:after {
   height: 1px;
   width: 85%;
   left: 9%;
-  background: linear-gradient(90deg, transparent, #66d3a448, transparent);
+  background: linear-gradient(90deg, transparent, #44917048, transparent);
   opacity: 0;
   transform: translateX(-25%);
   animation: light-travel 2s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -2696,7 +2696,7 @@ nav > a:hover:after {
   left: 18%;
   right: 12%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #62bf9740, transparent);
+  background: linear-gradient(90deg, transparent, #477d6640, transparent);
   transform: scaleX(0);
   animation: floor-reveal 1.3s 0.4s ease-out both;
   z-index: 0;
@@ -2811,13 +2811,13 @@ nav > a:hover:after {
   align-items: center;
   margin: 0 0 18px;
   font-size: 10px;
-  color: #79a793;
+  color: #556f64;
 }
 .comparison-toolbar button {
   font-size: 11px;
   border: 0;
   background: none;
-  color: #489f79;
+  color: #3b6251;
   padding: 12px 0;
   min-height: 40px;
 }
@@ -2836,12 +2836,12 @@ nav > a:hover:after {
   background: none;
   border: 0;
   font-size: 9px;
-  color: #78ab95;
+  color: #547265;
   padding: 5px 0;
   min-height: 28px;
 }
 .slot-remove:hover {
-  color: #16754c;
+  color: #1a4432;
 }
 .picker-arrow {
   font-size: 9px;
@@ -2915,7 +2915,7 @@ html.boot {
   right: 11%;
   height: 8%;
   z-index: 1;
-  background: radial-gradient(ellipse, #164b3447, transparent 70%);
+  background: radial-gradient(ellipse, #152d2347, transparent 70%);
 }
 @media (max-width: 650px) {
   .editorial-car-stage {
@@ -2959,10 +2959,10 @@ html.boot {
   display: flex;
   align-items: center;
   gap: 10px;
-  border: 1px solid #dcf1e8;
+  border: 1px solid #e2ebe7;
   border-radius: 6px;
   background: #fff;
-  color: #246d4d;
+  color: #214133;
   padding: 10px 13px;
   text-align: left;
   font-size: 12px;
@@ -2986,7 +2986,7 @@ html.boot {
   width: 23px;
   height: 23px;
   fill: none;
-  stroke: #62b28f;
+  stroke: #497360;
   stroke-width: 1.3;
 }
 .filter-chevron {
@@ -2999,15 +2999,15 @@ html.boot {
   transition: transform 0.2s;
 }
 .filter-trigger[aria-expanded='true'] {
-  border-color: #85d2b1;
-  box-shadow: 0 0 0 3px #dcf8ec59;
+  border-color: #52987a;
+  box-shadow: 0 0 0 3px #e4f0eb59;
 }
 .filter-trigger[aria-expanded='true'] .filter-chevron {
   transform: rotate(180deg);
 }
 .filter-trigger:focus-visible,
 .filter-options button:focus-visible {
-  outline: 2px solid #2dbd7f;
+  outline: 2px solid #306f54;
   outline-offset: 2px;
 }
 .filter-popover {
@@ -3019,9 +3019,9 @@ html.boot {
   max-width: calc(100vw - 38px);
   padding: 10px;
   background: #fff;
-  border: 1px solid #dcf1e8;
+  border: 1px solid #e2ebe7;
   border-radius: 10px;
-  box-shadow: 0 16px 45px #0b5b3820;
+  box-shadow: 0 16px 45px #11342520;
   z-index: 15;
   animation: panel-enter 0.18s ease-out;
 }
@@ -3030,7 +3030,7 @@ html.boot {
 }
 .filter-menu-title {
   font-size: 9px;
-  color: #87b4a1;
+  color: #5b7b6e;
   text-transform: uppercase;
   letter-spacing: 1.3px;
   margin: 8px 11px 12px;
@@ -3040,7 +3040,7 @@ html.boot {
   overflow-y: auto;
   overscroll-behavior: contain;
   scrollbar-width: thin;
-  scrollbar-color: #bee1d2 transparent;
+  scrollbar-color: #c8d7d1 transparent;
   padding: 2px;
 }
 .filter-options button {
@@ -3052,7 +3052,7 @@ html.boot {
   background: none;
   border: 0;
   border-radius: 5px;
-  color: #317558;
+  color: #29473b;
   text-align: left;
   padding: 10px;
   font-size: 12px;
@@ -3062,11 +3062,11 @@ html.boot {
 }
 .filter-options button:hover,
 .filter-options button:focus-visible {
-  background: #f1fcf7;
+  background: #f4f9f7;
 }
 .filter-options button[aria-selected='true'] {
-  background: #eafdf5;
-  color: #169a61;
+  background: #eff8f4;
+  color: #1f5940;
 }
 .filter-options img {
   width: 42px;
@@ -3078,7 +3078,7 @@ html.boot {
   width: 29px;
   height: 23px;
   fill: none;
-  stroke: #75b89b;
+  stroke: #517c69;
   stroke-width: 1.1;
   flex-shrink: 0;
   margin: 0 6px;
@@ -3088,7 +3088,7 @@ html.boot {
 }
 .filter-options small {
   font-size: 10px;
-  color: #93bdab;
+  color: #608475;
   font-weight: 400;
 }
 .filter-check {
@@ -3103,7 +3103,7 @@ html.boot {
 .filters input {
   min-height: 48px !important;
   background: #fff !important;
-  border: 1px solid #dcf1e8 !important;
+  border: 1px solid #e2ebe7 !important;
   border-radius: 6px;
   padding: 10px 13px !important;
 }
@@ -3144,34 +3144,34 @@ html.boot {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #289f6b;
+  color: #295e47;
   font-size: 11px;
   letter-spacing: 0.1px;
   margin: 0 0 20px;
   width: fit-content;
-  border-bottom: 1px solid #8fd0b43d;
+  border-bottom: 1px solid #a1beb23d;
   padding-bottom: 7px;
 }
 .trade-in-hero span {
   font-size: 18px;
 }
 .trade-in-hero:hover {
-  color: #086b40;
+  color: #113d2a;
 }
 .trade-in {
   display: flex;
   align-items: center;
   gap: 45px;
-  background: linear-gradient(110deg, #e4fdf2, #f5fffb);
-  border-top: 1px solid #dcf4ea;
-  border-bottom: 1px solid #dcf4ea;
+  background: linear-gradient(110deg, #ebf6f1, #f8fcfa);
+  border-top: 1px solid #e3ede9;
+  border-bottom: 1px solid #e3ede9;
   padding-top: 62px;
   padding-bottom: 62px;
 }
 .trade-symbol {
   font-size: 70px;
   font-weight: 400;
-  color: #7acda9;
+  color: #4e9074;
   line-height: 1;
 }
 .trade-in h2 {
@@ -3184,7 +3184,7 @@ html.boot {
 .trade-in p:not(.eyebrow) {
   font-size: 12px;
   line-height: 1.9;
-  color: #689e87;
+  color: #4c665b;
   margin: 18px 0 0;
 }
 .trade-in > .button {
@@ -3197,7 +3197,7 @@ html.boot {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
   gap: 70px;
-  background: #f6fffb;
+  background: #f8fdfb;
   align-items: center;
 }
 .location h3 {
@@ -3210,12 +3210,12 @@ html.boot {
   font-size: 13px;
   font-style: normal;
   line-height: 2;
-  color: #559076;
+  color: #415b4f;
 }
 .location-copy > p:not(.eyebrow) {
   font-size: 12px;
   line-height: 1.9;
-  color: #7ba593;
+  color: #566e64;
   margin: 20px 0 28px;
 }
 .location-actions {
@@ -3229,11 +3229,11 @@ html.boot {
 }
 .location-actions > a:not(.button) {
   font-size: 11px;
-  color: #4ba77f;
+  color: #3e6755;
 }
 .location-map {
-  background: #e6f4ee;
-  border: 1px solid #d6efe4;
+  background: #eaf0ed;
+  border: 1px solid #dde8e3;
   border-radius: 5px;
   overflow: hidden;
 }
@@ -3254,12 +3254,12 @@ html.boot {
 .map-label span {
   font-size: 8px;
   letter-spacing: 1px;
-  color: #75a691;
+  color: #536e62;
 }
 .map-label b {
   font-weight: 500;
   font-size: 10px;
-  color: #34986d;
+  color: #2f5b48;
 }
 @media (max-width: 1000px) {
   header nav {
@@ -3352,7 +3352,7 @@ html.boot {
 /* 07. Pestañas de especificaciones y sus tamaños en teléfono */
 .full-specs {
   padding: 34px 36px 30px;
-  border-top: 1px solid #dbf1e7;
+  border-top: 1px solid #e1ebe6;
   background: #fff;
 }
 .full-specs-heading {
@@ -3360,7 +3360,7 @@ html.boot {
 }
 .full-specs-heading .eyebrow {
   font-size: 8px;
-  color: #72b095;
+  color: #517565;
   margin-bottom: 12px;
 }
 .full-specs-heading h3 {
@@ -3380,7 +3380,7 @@ html.boot {
 .spec-tabs {
   display: flex;
   gap: 7px;
-  border-bottom: 1px solid #dcefe7;
+  border-bottom: 1px solid #e1eae6;
   padding-bottom: 14px;
   overflow-x: auto;
   scrollbar-width: thin;
@@ -3390,7 +3390,7 @@ html.boot {
   background: none;
   border-radius: 4px;
   padding: 12px 17px;
-  color: #74a08d;
+  color: #52695f;
   font-size: 12px;
   white-space: nowrap;
   min-height: 44px;
@@ -3400,13 +3400,13 @@ html.boot {
     border-color 0.2s;
 }
 .spec-tabs button:hover {
-  color: #249f6a;
-  background: #f6fdfa;
+  color: #275d46;
+  background: #f8fbfa;
 }
 .spec-tabs button[aria-selected='true'] {
-  color: #1b925e;
-  background: #eafcf4;
-  border-color: #d7f4e7;
+  color: #21553e;
+  background: #eff7f3;
+  border-color: #dfece6;
   font-weight: 600;
 }
 .spec-panel {
@@ -3421,7 +3421,7 @@ html.boot {
   font-weight: 500;
   font-size: 17px;
   margin: 0 0 19px;
-  color: #3b8666;
+  color: #315244;
 }
 .full-specs .spec-list {
   display: grid;
@@ -3434,13 +3434,13 @@ html.boot {
   min-width: 0;
   padding: 17px 19px;
   background: #f6fcf9;
-  border: 1px solid #e6f5ef;
+  border: 1px solid #eaf1ee;
   border-radius: 4px;
   line-height: 1.6;
 }
 .full-specs .spec-list dt {
   font-size: 10px;
-  color: #7caa96;
+  color: #567266;
   margin-bottom: 7px;
 }
 .full-specs .spec-list dd {
@@ -3448,7 +3448,7 @@ html.boot {
   text-align: left;
   max-width: 100%;
   font-weight: 500;
-  color: #246c4d;
+  color: #214133;
   overflow-wrap: anywhere;
 }
 .full-specs .equipment-list {
@@ -3458,7 +3458,7 @@ html.boot {
   margin: 0;
 }
 .full-specs .equipment-list li {
-  border-bottom: 1px solid #e6f5ef;
+  border-bottom: 1px solid #eaf1ee;
   font-size: 13px;
   padding: 13px 10px 13px 20px;
   line-height: 1.8;
@@ -3473,7 +3473,7 @@ html.boot {
   font-size: 10px;
   line-height: 1.9;
   padding-top: 18px;
-  border-top: 1px solid #e6f5ef;
+  border-top: 1px solid #eaf1ee;
 }
 .vehicle-gallery {
   position: relative;
@@ -3488,7 +3488,7 @@ html.boot {
   object-fit: cover;
 }
 .vehicle-detail {
-  background: #f1fbf7;
+  background: #f4f8f6;
   align-items: stretch;
 }
 .detail-body {
@@ -3567,7 +3567,7 @@ html.boot {
   animation: scene-arrival 1.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 .editorial-car-stage .editorial-car {
-  filter: drop-shadow(0 9px 7px #12452f2b);
+  filter: drop-shadow(0 9px 7px #12291f2b);
   transform: translate3d(42px, 10px, 0) scale(0.97);
   transition:
     opacity 0.85s ease,
@@ -3584,7 +3584,7 @@ html.boot {
   inset: 8% 0 10%;
   z-index: 3;
   pointer-events: none;
-  background: linear-gradient(110deg, transparent 36%, #d0ffeb30 49%, transparent 63%);
+  background: linear-gradient(110deg, transparent 36%, #ddf2e930 49%, transparent 63%);
   mask-image: radial-gradient(ellipse, #000 25%, transparent 68%);
   transform: translateX(-38%);
   opacity: 0;
@@ -3622,7 +3622,7 @@ html.boot {
   }
   .editorial-car-stage .editorial-car {
     width: 94%;
-    filter: drop-shadow(0 6px 5px #12452f25);
+    filter: drop-shadow(0 6px 5px #12291f25);
   }
   @keyframes scene-arrival {
     from {
@@ -3659,7 +3659,7 @@ html.boot {
   width: fit-content;
   padding: 15px 0;
   margin-top: 13px;
-  color: #359a6e;
+  color: #305d49;
   font-size: 12px;
   transition:
     color 0.2s,
@@ -3677,7 +3677,7 @@ html.boot {
 .social-link small {
   display: block;
   font-size: 10px;
-  color: #78a994;
+  color: #547064;
   margin-top: 5px;
 }
 .social-link b {
@@ -3689,14 +3689,14 @@ html.boot {
   stroke: none;
 }
 .social-link:hover {
-  color: #137b4e;
+  color: #194733;
   transform: translateX(3px);
 }
 .footer-instagram {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #3f9a73;
+  color: #365e4d;
   font-size: 11px;
   min-height: 44px;
 }
@@ -3706,7 +3706,7 @@ html.boot {
 }
 .social-link:focus-visible,
 .footer-instagram:focus-visible {
-  outline: 2px solid #2dbd7f;
+  outline: 2px solid #306f54;
   outline-offset: 5px;
   border-radius: 3px;
 }
@@ -3718,7 +3718,7 @@ html.boot {
   left: 17%;
   right: 13%;
   transform: translateY(-50%);
-  background: radial-gradient(ellipse, #154d3555, transparent 70%);
+  background: radial-gradient(ellipse, #152e2355, transparent 70%);
   animation: ground-arrival 1.4s ease-out both;
 }
 @keyframes ground-arrival {
