@@ -2,6 +2,10 @@
 const TECH = FICHAS_TECNICAS;
 // Cada carga empieza con una comparación vacía.
 let compared = [];
+function comparisonHasUnit(id) {
+  return compared.includes(id);
+}
+const techFor = (car) => TECH[car.specId];
 const pending = 'Por confirmar';
 const basicRows = (c) => [
   ['Año modelo', c.year],
@@ -36,7 +40,12 @@ const renderEquipmentList = (items) =>
   '</ul>';
 // Construye las cinco pestañas de especificaciones de una unidad.
 function techSections(c) {
-  const t = TECH[c.id];
+  const t = techFor(c);
+  if (!t)
+    return (
+      renderSpecList(basicRows(c)) +
+      '<p class="spec-unit-note">Motor y equipamiento de esta versión por confirmar con el asesor.</p>'
+    );
   const groups = [
     ['Datos de la unidad', renderSpecList(basicRows(c))],
     [
@@ -111,12 +120,8 @@ function openVehicle(id) {
   $('#detailContent').innerHTML = /* HTML */ `
     <div class="vehicle-detail">
       <div class="vehicle-gallery">
-        <img
-          class="detail-main"
-          id="galleryMain"
-          src="${c.photos[0]}"
-          alt="${c.name}, fotografía 1"
-        />
+        ${carPhoto(c, false, 'detail-main')}
+        ${c.photoNote ? `<span class="gallery-photo-note">${c.photoNote}</span>` : ''}
       </div>
       <div class="detail-body">
         <p class="eyebrow">SEMINUEVO · ${c.brand} · ${c.year}</p>
@@ -206,10 +211,10 @@ function refreshCompare() {
             ${
               c
                 ? /* HTML */ `
-                    <img src="${c.thumbnail}" alt="" />
+                    ${carPhoto(c, true)}
                     <span>
                       <strong>${c.name}</strong>
-                      <small>${c.year} · ${money(c.price)}</small>
+                      <small>${c.year} · ${c.color} · ${money(c.price)}</small>
                     </span>
                   `
                 : '<span class="slot-plus">＋</span><span><strong>Elige un seminuevo</strong><small>Explora nuestra selección</small></span>'
@@ -246,16 +251,16 @@ function refreshCompare() {
     ['Transmisión', (c) => c.transmission],
     ['Color', (c) => c.color],
     ['Tipo', (c) => c.category],
-    ['Motor', (c) => TECH[c.id]?.engine || pending],
-    ['Potencia', (c) => TECH[c.id]?.power || pending],
-    ['Torque', (c) => TECH[c.id]?.torque || pending],
-    ['Caja', (c) => TECH[c.id]?.gearbox || pending],
-    ['Tracción', (c) => TECH[c.id]?.drive || pending],
-    ['Combustible', (c) => TECH[c.id]?.fuel || pending],
-    ['Pasajeros', (c) => TECH[c.id]?.passengers || pending],
-    ['Cajuela', (c) => TECH[c.id]?.trunk || pending],
-    ['Seguridad', (c) => (TECH[c.id] ? TECH[c.id].safety.join(' · ') : pending)],
-    ['Equipamiento', (c) => (TECH[c.id] ? TECH[c.id].equipment.join(' · ') : pending)],
+    ['Motor', (c) => techFor(c)?.engine || pending],
+    ['Potencia', (c) => techFor(c)?.power || pending],
+    ['Torque', (c) => techFor(c)?.torque || pending],
+    ['Caja', (c) => techFor(c)?.gearbox || pending],
+    ['Tracción', (c) => techFor(c)?.drive || pending],
+    ['Combustible', (c) => techFor(c)?.fuel || pending],
+    ['Pasajeros', (c) => techFor(c)?.passengers || pending],
+    ['Cajuela', (c) => techFor(c)?.trunk || pending],
+    ['Seguridad', (c) => (techFor(c) ? techFor(c).safety.join(' · ') : pending)],
+    ['Equipamiento', (c) => (techFor(c) ? techFor(c).equipment.join(' · ') : pending)],
   ];
   const minPrice = Math.min(...selected.map((c) => c.price));
   const minKm = Math.min(...selected.filter((c) => c.km != null).map((c) => c.km));
@@ -282,7 +287,7 @@ function refreshCompare() {
                     >
                       ✕
                     </button>
-                    <img src="${c.thumbnail}" alt="${c.name}" />
+                    ${carPhoto(c, true)}
                     <span>${c.year} · ${c.brand}</span>
                     <h3>${c.name}</h3>
                     <button class="compare-details" data-open="${c.id}">
@@ -409,7 +414,7 @@ const years = INVENTARIO.map((c) => c.year);
 $('#inventoryStats').innerHTML = /* HTML */ `
   <div>
     <strong>${INVENTARIO.length}</strong>
-    <span>Autos en esta selección</span>
+    <span>Autos en inventario de la agencia</span>
   </div>
   <div>
     <strong>${totalBrands}</strong>
@@ -464,7 +469,7 @@ let pickerSlot = 0,
 function renderPicker() {
   const query = $('#pickerSearch').value.toLocaleLowerCase('es').trim();
   const available = INVENTARIO.filter((c) =>
-    (c.name + ' ' + c.year).toLocaleLowerCase('es').includes(query)
+    `${c.name} ${c.year} ${c.color}`.toLocaleLowerCase('es').includes(query)
   );
   $('#pickerResults').innerHTML = available.length
     ? available
@@ -472,10 +477,10 @@ function renderPicker() {
           const unavailable = compared.includes(c.id) && compared[pickerSlot] !== c.id;
           return /* HTML */ `
             <button class="picker-option" data-pick-car="${c.id}" ${unavailable ? 'disabled' : ''}>
-              <img src="${c.thumbnail}" alt="" loading="lazy" />
+              ${carPhoto(c, true)}
               <span>
                 <strong>${c.name}</strong>
-                <small>${c.year} · ${mileage(c)} · ${c.transmission}</small>
+                <small>${c.year} · ${c.color} · ${mileage(c)} · ${c.transmission}</small>
                 <b>
                   ${money(c.price)}
                   <em>MXN</em>

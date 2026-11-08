@@ -1,4 +1,113 @@
 /* Preferencias visuales y acciones de inventario. Se carga después de styles.css. */
+.card-variants {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+.card-variants:empty {
+  display: none;
+}
+.card-variants label {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+.card-variants select {
+  min-height: 40px;
+  width: 100%;
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--navy);
+  background: transparent;
+  font-size: 12px;
+}
+.color-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.color-option {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  gap: 6px;
+  padding: 5px 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  color: var(--navy);
+  background: transparent;
+  font-size: 11px;
+}
+.color-option > span {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #899caf;
+  background: var(--paint);
+}
+.color-option[aria-pressed='true'] {
+  border-color: var(--blue);
+  box-shadow: inset 0 0 0 1px var(--blue);
+}
+.color-option:focus-visible,
+.card-variants select:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+.card-version,
+.variant-photo-note {
+  color: var(--muted);
+  font-size: 11px;
+}
+.variant-photo-note {
+  margin: 0 0 8px;
+}
+.photo-pending {
+  display: grid;
+  place-items: center;
+  min-height: 72px;
+  width: 100%;
+  padding: 12px;
+  color: var(--muted);
+  background: #e9f0f7;
+  font-size: 12px;
+  text-align: center;
+}
+.card-photo > .photo-pending {
+  height: 100%;
+}
+.vehicle-gallery {
+  position: relative;
+}
+.vehicle-gallery > .photo-pending {
+  min-height: 240px;
+}
+.gallery-photo-note {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  padding: 7px 9px;
+  border-radius: 4px;
+  background: #0a1729e8;
+  color: #fff;
+  font-size: 11px;
+}
+.picker-option > .photo-pending,
+.vehicle-picker-trigger > .photo-pending {
+  width: 84px;
+  flex-shrink: 0;
+}
+[data-theme='dark'] .photo-pending,
+[data-theme='dark'] .card-variants select {
+  background: #17283b;
+}
+
 .theme-toggle {
   display: inline-flex;
   align-items: center;
@@ -6,17 +115,17 @@
   flex-shrink: 0;
   width: 42px;
   height: 42px;
-  border: 1px solid #5e887644;
+  border: 1px solid #91aac144;
   border-radius: 50%;
-  color: #224d3b;
+  color: #215a83;
   background: transparent;
   transition:
     background 0.2s,
     border-color 0.2s;
 }
 .theme-toggle:hover {
-  background: #c8dfd533;
-  border-color: #53846f;
+  background: #bad6ed33;
+  border-color: #7da3c0;
 }
 .theme-toggle svg {
   width: 19px;
@@ -39,7 +148,7 @@
 .theme-toggle:focus-visible,
 .card-trade-in:focus-visible,
 .detail-trade-in:focus-visible {
-  outline: 2px solid #3a7a5e;
+  outline: 2px solid #428dc7;
   outline-offset: 4px;
 }
 
@@ -57,12 +166,12 @@ header nav > a[href='#comparar'] {
 .card .compare-toggle {
   width: 100%;
   justify-content: flex-start;
-  border-bottom: 1px solid #e9f0ed;
+  border-bottom: 1px solid #e5edf4;
   margin: 9px 0 0;
   padding: 13px 0;
 }
 .compare-toggle[aria-pressed='true'] {
-  color: #1f6345;
+  color: #1265ac;
 }
 #comparisonContent {
   scroll-margin-top: 24px;
@@ -86,7 +195,7 @@ header nav > a[href='#comparar'] {
   display: inline-flex;
   gap: 5px;
   align-items: center;
-  color: #3f5f51;
+  color: #507a99;
   font-size: 10px;
   line-height: 1.5;
   min-height: 44px;
@@ -98,7 +207,7 @@ header nav > a[href='#comparar'] {
 }
 .card-trade-in:hover,
 .detail-trade-in:hover {
-  color: #1f6345;
+  color: #1265ac;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -107,7 +216,7 @@ header nav > a[href='#comparar'] {
   align-items: center;
   gap: 7px;
   font-size: 12px;
-  color: #3f5f51;
+  color: #507a99;
   min-height: 44px;
 }
 .detail-actions .compare-toggle {
@@ -120,7 +229,7 @@ header nav > a[href='#comparar'] {
 .advisor-socials {
   margin-top: 32px;
   padding-top: 27px;
-  border-top: 1px solid #c1d3cb;
+  border-top: 1px solid #b7cddd;
 }
 .advisor-socials h3 {
   font-family: Manrope, Arial, sans-serif;
@@ -131,7 +240,7 @@ header nav > a[href='#comparar'] {
   margin: 0;
 }
 .advisor-socials > p {
-  color: #486056;
+  color: #617e96;
   font-size: 12px;
   line-height: 1.7;
   margin: 10px 0 20px;
@@ -144,7 +253,7 @@ header nav > a[href='#comparar'] {
 .advisor-socials .social-link {
   margin: 0;
   padding: 17px 18px;
-  border: 1px solid #d0e0d9;
+  border: 1px solid #c7dce9;
   border-radius: 8px;
   background: #ffffff66;
   flex: 1;
@@ -164,34 +273,34 @@ header nav > a[href='#comparar'] {
 }
 .advisor-socials .social-link:hover {
   transform: translateY(-2px);
-  border-color: #4f8e72;
+  border-color: #79aacb;
   background: #fff;
 }
 
 /* Tema oscuro: superficies y texto, sin invertir las fotografías de los coches. */
 :root[data-theme='dark'] {
   color-scheme: dark;
-  --navy: #e7f1ed;
-  --blue: #9fd2bc;
-  --muted: #abbeb6;
-  --line: #21322b;
-  --night-bg: #09110d;
-  --night-panel: #0e1b15;
-  --night-raised: #14241d;
-  --night-text: #e7f1ed;
-  --night-secondary: #abbeb6;
-  --night-accent: #a5d5c0;
-  --night-line: #21322b;
+  --navy: #e0edf8;
+  --blue: #80bff1;
+  --muted: #a0b4c9;
+  --line: #2a3c50;
+  --night-bg: #0a111c;
+  --night-panel: #101d2c;
+  --night-raised: #17283b;
+  --night-text: #e0edf8;
+  --night-secondary: #a0b4c9;
+  --night-accent: #88c4f2;
+  --night-line: #2a3c50;
 }
 [data-theme='dark'] body {
   background: var(--night-bg);
   color: var(--night-text);
 }
 [data-theme='dark'] .inventory {
-  background: linear-gradient(180deg, #0a140f, #0c1913 75%, #0a140f);
+  background: linear-gradient(180deg, #0a1421, #0d1a29 75%, #0a1421);
 }
 [data-theme='dark'] .filters {
-  background: #13241d;
+  background: #15283c;
   border-color: var(--night-line);
 }
 [data-theme='dark'] .picker-option {
@@ -199,7 +308,7 @@ header nav > a[href='#comparar'] {
   border-color: var(--night-line);
 }
 [data-theme='dark'] .picker-option:hover:not(:disabled) {
-  background: #182d24;
+  background: #1b334b;
 }
 [data-theme='dark'] .inventory-stats span,
 [data-theme='dark'] .results,
@@ -219,14 +328,14 @@ header nav > a[href='#comparar'] {
   filter: brightness(0) invert(0.94);
 }
 [data-theme='dark'] .hero {
-  background: radial-gradient(ellipse at 80% 45%, #173327, transparent 70%), #0a140f;
+  background: radial-gradient(ellipse at 80% 45%, #163757, transparent 70%), #0a1421;
 }
 [data-theme='dark'] .hero-glow {
-  background: #1d4332;
+  background: #1b4872;
   opacity: 0.3;
 }
 [data-theme='dark'] .hero-aura {
-  background: radial-gradient(ellipse, #26523f55, transparent 68%);
+  background: radial-gradient(ellipse, #275d8a55, transparent 68%);
 }
 [data-theme='dark'] .hero-brand-curtain {
   opacity: 0.08;
@@ -246,26 +355,26 @@ header nav > a[href='#comparar'] {
   color: var(--night-accent);
 }
 [data-theme='dark'] .button {
-  background: #286047;
+  background: #246aa3;
   color: #fff;
 }
 [data-theme='dark'] .button:hover {
-  background: #316d53;
+  background: #307eb9;
 }
 [data-theme='dark'] .nav-contact,
 [data-theme='dark'] .theme-toggle {
   color: var(--night-text);
-  border-color: #4b6e5f66;
+  border-color: #658bab66;
 }
 [data-theme='dark'] #navCompareCount {
-  background: #1d372b;
-  color: #d4efe3;
+  background: #203e5b;
+  color: #c4e5ff;
 }
 [data-theme='dark'] .brand-strip,
 [data-theme='dark'] .ticker,
 [data-theme='dark'] .closing {
-  background: #0f1e17;
-  color: #e7f1ed;
+  background: #101f32;
+  color: #e0edf8;
 }
 [data-theme='dark'] .comparison,
 [data-theme='dark'] .card,
@@ -281,10 +390,10 @@ header nav > a[href='#comparar'] {
 }
 [data-theme='dark'] .advisor,
 [data-theme='dark'] .location {
-  background: #0e1c16;
+  background: #101e2e;
 }
 [data-theme='dark'] .trade-in {
-  background: linear-gradient(110deg, #13281f, #0f1f18);
+  background: linear-gradient(110deg, #142c43, #102033);
   border-color: var(--night-line);
 }
 [data-theme='dark'] .compare-slot,
@@ -303,7 +412,7 @@ header nav > a[href='#comparar'] {
 [data-theme='dark'] .picker-option:hover,
 [data-theme='dark'] .filter-options button:hover,
 [data-theme='dark'] .spec-tabs button:hover {
-  background: #182d24;
+  background: #1b334b;
 }
 [data-theme='dark'] .filter-trigger,
 [data-theme='dark'] .filters input,
@@ -313,7 +422,7 @@ header nav > a[href='#comparar'] {
   border-color: var(--night-line) !important;
 }
 [data-theme='dark'] input::placeholder {
-  color: #aabdb5;
+  color: #9fb4c8;
 }
 [data-theme='dark'] .filter-options button,
 [data-theme='dark'] .vehicle-picker-trigger,
@@ -326,9 +435,9 @@ header nav > a[href='#comparar'] {
 [data-theme='dark'] .filter-options button[aria-selected='true'],
 [data-theme='dark'] .spec-tabs button[aria-selected='true'],
 [data-theme='dark'] .highlight-cell {
-  color: #c6e9da;
-  background: #1a3529;
-  border-color: #29473a;
+  color: #b0daff;
+  background: #1b3c58;
+  border-color: #315774;
 }
 [data-theme='dark'] .filter-options img,
 [data-theme='dark'] .filter-trigger > img {
@@ -339,7 +448,7 @@ header nav > a[href='#comparar'] {
 }
 [data-theme='dark'] .compare-table tbody th {
   background: var(--night-raised);
-  color: #cdddd6;
+  color: #c3d6e7;
 }
 [data-theme='dark'] .compare-table th,
 [data-theme='dark'] .compare-table td,
@@ -393,22 +502,22 @@ header nav > a[href='#comparar'] {
   color: var(--night-accent);
 }
 [data-theme='dark'] .advisor-socials .social-link {
-  background: #15271f;
-  border-color: #294237;
+  background: #172c40;
+  border-color: #33506b;
 }
 [data-theme='dark'] .advisor-socials .social-link:hover {
-  background: #1c342a;
+  background: #203c56;
 }
 [data-theme='dark'] .close-dialog,
 [data-theme='dark'] #closePicker,
 [data-theme='dark'] .remove-compare {
   color: var(--night-text);
-  background: #1b2e25;
+  background: #20364b;
 }
 [data-theme='dark'] .advisor-photo > span,
 [data-theme='dark'] .badge {
-  background: #11231bec;
-  color: #e7f1ed;
+  background: #12283bec;
+  color: #e0edf8;
 }
 [data-theme='dark'] footer {
   background: var(--night-bg);

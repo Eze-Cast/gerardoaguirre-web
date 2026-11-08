@@ -1,6 +1,56 @@
 // Especificaciones por ID: utiliza el mismo ID que en inventario.js.
 // Conserva source y note para distinguir datos verificados y referencias por confirmar.
 const FICHAS_TECNICAS = {
+  197: {
+    engine: '1.4 L TSI turbo · 4 cilindros',
+    power: '150 hp a 5,400 rpm',
+    torque: '250 Nm a 2,000 rpm',
+    gearbox: 'Tiptronic · 6 velocidades',
+    drive: 'Delantera',
+    fuel: 'Gasolina',
+    passengers: '5',
+    trunk: '510 L',
+    tank: '50 L',
+    dimensions: '4,758 × 1,799 × 1,459 mm',
+    source:
+      'https://www.vw.com.mx/idhub/content/dam/onehub_pkw/importers/mx/fichas-tecnicas/producto/2024/jetta/vw-ficha-tecnica-jetta-24.pdf',
+    safety: [
+      'Bolsas de aire frontales, laterales y de cortina',
+      'Control de estabilidad y tracción',
+      'Anclajes ISOFIX',
+    ],
+    equipment: [
+      'Faros principales LED',
+      'Volante multifunción',
+      'Rines de aluminio de 16 pulgadas',
+      'Respaldo trasero abatible 60/40',
+    ],
+  },
+  107: {
+    engine: '1.4 L TSI turbo · 4 cilindros',
+    power: '150 hp a 5,000 rpm',
+    torque: '250 Nm de 1,400 a 3,500 rpm',
+    gearbox: 'Tiptronic · 8 velocidades',
+    drive: 'Delantera',
+    fuel: 'Gasolina',
+    passengers: '5',
+    trunk: '510 L',
+    tank: '50 L',
+    dimensions: '4,720 × 1,799 × 1,459 mm',
+    source:
+      'https://www.vw.com.mx/idhub/content/dam/onehub_pkw/importers/mx/fichas-tecnicas/producto/2025/jetta/vw-jetta-2025-ficha-tecnica.pdf',
+    safety: [
+      'Bolsas de aire frontales, laterales y de cortina',
+      'Control de estabilidad y tracción',
+      'Anclajes ISOFIX',
+    ],
+    equipment: [
+      'Faros principales LED',
+      'Iluminación ambiental',
+      'Rines de aluminio de 16 pulgadas',
+      'Respaldo trasero abatible',
+    ],
+  },
   1: {
     source:
       'https://www.vw.com.mx/idhub/content/dam/onehub_pkw/importers/mx/fichas-tecnicas/producto/2023/jetta/vw-ft-2023-jetta.pdf',

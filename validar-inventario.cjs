@@ -37,22 +37,26 @@ for (const c of cars) {
     'price',
     'transmission',
     'category',
-    'thumbnail',
   ])
     if (c[field] === undefined || c[field] === null || c[field] === '')
       errors.push(`${c.name}: falta ${field}`);
   const modelKey = (c.brand + '|' + c.model).toLocaleLowerCase('es');
-  if (models.has(modelKey)) errors.push(`Modelo repetido: ${c.brand} ${c.model}`);
   models.add(modelKey);
   if (c.km === null) pending.push(`${c.name}: kilometraje`);
   if (!(c.price > 0 && (c.km === null || c.km >= 0))) errors.push(`${c.name}: precio/km inválidos`);
-  if (!Array.isArray(c.photos) || c.photos.length !== 1)
-    errors.push(`${c.name}: requiere una foto`);
-  for (const p of [...(c.photos || []), c.thumbnail])
+  if (
+    !Array.isArray(c.photos) ||
+    c.photos.length > 1 ||
+    Boolean(c.thumbnail) !== Boolean(c.photos?.length)
+  )
+    errors.push(`${c.name}: imagen y miniatura deben corresponder a la misma unidad`);
+  if (!c.thumbnail) pending.push(`${c.name}: fotografía pendiente`);
+  for (const p of [...(c.photos || []), ...(c.thumbnail ? [c.thumbnail] : [])])
     if (!p || !fs.existsSync(path.join(__dirname, p))) errors.push(`${c.name}: foto ausente ${p}`);
-  const t = specs[c.id];
+  const t = specs[c.specId];
   if (!t) {
-    errors.push(`${c.name}: falta ficha técnica`);
+    if (c.specId) errors.push(`${c.name}: falta la ficha técnica indicada`);
+    else pending.push(`${c.name}: ficha del fabricante por confirmar`);
     continue;
   }
   for (const f of fields)
@@ -64,7 +68,7 @@ for (const c of cars) {
   if (!/^https:\/\//.test(t.source)) errors.push(`${c.name}: fuente técnica inválida`);
 }
 console.log(
-  `${cars.length} autos · ${cars.reduce((n, c) => n + c.photos.length, 0)} fotografías · ${Object.keys(specs).length} fichas técnicas`
+  `${models.size} modelos · ${cars.length} unidades · ${cars.filter((c) => c.photos.length).length} unidades con foto · ${cars.filter((c) => specs[c.specId]).length} unidades con ficha técnica de referencia`
 );
 if (errors.length) {
   console.error(errors.join('\n'));

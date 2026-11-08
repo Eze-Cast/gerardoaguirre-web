@@ -65,7 +65,9 @@
           text = escapeHTML(option.textContent);
         const count =
           id === 'brand'
-            ? INVENTARIO.filter((c) => !option.value || c.brand === option.value).length
+            ? new Set(
+                INVENTARIO.filter((c) => !option.value || c.brand === option.value).map(modelKey)
+              ).size
             : null;
         return /* HTML */ `
           <button type="button" role="option" tabindex="-1" data-index="${i}" aria-selected="false">
