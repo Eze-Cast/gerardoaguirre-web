@@ -1,22 +1,6 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <script>
-      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-      history.replaceState(null, '', location.pathname + location.search + '#inicio');
-      document.documentElement.classList.add('boot');
-      addEventListener(
-        'DOMContentLoaded',
-        () => {
-          scrollTo({ top: 0, left: 0, behavior: 'instant' });
-          requestAnimationFrame(() => {
-            scrollTo({ top: 0, left: 0, behavior: 'instant' });
-            requestAnimationFrame(() => document.documentElement.classList.remove('boot'));
-          });
-        },
-        { once: true }
-      );
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#122e24" />
@@ -533,10 +517,10 @@
         </p>
       </section>
       <section class="advisor section" id="asesor">
-        <div class="advisor-photo advisor-portrait reveal">
-          <img src="assets/gerardo-aguirre-hernandez.jpg" alt="Retrato de Gerardo Aguirre Hernández" width="1106" height="1422" loading="lazy" decoding="async" />
+        <div class="advisor-photo advisor-portrait">
+          <img src="assets/gerardo-aguirre-hernandez.jpg" alt="Retrato de Gerardo Aguirre Hernández" width="1106" height="1422" loading="eager" decoding="async" />
         </div>
-        <div class="advisor-copy reveal">
+        <div class="advisor-copy">
           <p class="eyebrow">TU ASESOR</p>
           <h2>Gerardo Aguirre <em>Hernández</em></h2>
           <p class="profile-description">Ejecutivo de ventas de seminuevos</p>
