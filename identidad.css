@@ -43,3 +43,26 @@
   object-position: center;
   transform: none;
 }
+
+/* En teléfono, el logo y los cuatro accesos comparten dos filas. */
+@media (max-width: 650px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    height: 94px;
+  }
+  header .logo img {
+    width: 160px !important;
+  }
+  header nav {
+    justify-content: center;
+    gap: clamp(8px, 3vw, 18px);
+  }
+  header nav > a[href] {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+}
