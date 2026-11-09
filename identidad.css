@@ -61,7 +61,7 @@
   header nav > a[href] {
     display: inline-flex;
     align-items: center;
-    min-height: 32px;
+    min-height: 44px;
     font-size: 11px;
     white-space: nowrap;
   }
