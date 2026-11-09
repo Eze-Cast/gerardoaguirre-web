@@ -30,3 +30,16 @@
   min-width: min(100%, 160px);
 }
 .advisor-socials .social-link:hover { border-color: var(--emerald); }
+
+/* La tarjeta original se muestra completa, también en pantallas estrechas. */
+.advisor-photo.advisor-portrait {
+  aspect-ratio: 1106 / 1422;
+  height: auto;
+  min-height: 0;
+  border-radius: 16px;
+}
+.advisor-portrait img {
+  object-fit: contain;
+  object-position: center;
+  transform: none;
+}
