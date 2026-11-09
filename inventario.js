@@ -1,21 +1,6 @@
 // Unidades disponibles de la lista activa. Cada unidad conserva sus datos y foto.
 const INVENTARIO = [
   {
-    id: 105,
-    name: 'Volkswagen Jetta Wolfsburg',
-    brand: 'Volkswagen',
-    model: 'Jetta',
-    version: 'Wolfsburg',
-    year: 2020,
-    color: 'Gris',
-    km: null,
-    price: 309000,
-    transmission: 'Por confirmar',
-    category: 'Sedán / Hatchback',
-    photos: [],
-    thumbnail: null,
-  },
-  {
     id: 1,
     name: 'Volkswagen Jetta Sportline',
     brand: 'Volkswagen',
@@ -249,21 +234,6 @@ const INVENTARIO = [
     specId: 21,
     photos: ['assets/autos/21-retocada.webp'],
     thumbnail: 'assets/autos/21-retocada-thumb.webp',
-  },
-  {
-    id: 124,
-    name: 'Volkswagen Tiguan R-Line',
-    brand: 'Volkswagen',
-    model: 'Tiguan',
-    version: 'R-Line',
-    year: 2022,
-    color: 'Plata',
-    km: 99500,
-    price: 499000,
-    transmission: 'Automática',
-    category: 'SUV',
-    photos: [],
-    thumbnail: null,
   },
   {
     id: 125,
