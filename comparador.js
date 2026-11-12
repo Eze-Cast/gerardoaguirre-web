@@ -135,6 +135,7 @@ function openVehicle(id) {
           ${money(c.price)}
           <small>MXN</small>
         </p>
+        ${c.albumUrl ? `<p><a href="${c.albumUrl}" target="_blank" rel="noopener">Ver todas las fotos y videos ↗</a></p>` : ''}
         <div class="detail-actions">
           <a class="button" href="${wa(c)}" target="_blank" rel="noopener">
             Me interesa este auto ↗
