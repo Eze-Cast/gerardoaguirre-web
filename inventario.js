@@ -9,7 +9,7 @@ const INVENTARIO = [
     name: "Volkswagen Jetta Comfortline",
     year: 2019,
     color: "Rojo",
-    km: null,
+    km: 71159,
     price: 269900,
     transmission: "Automática",
     photos: ["assets/autos/nov12/b41b6b66f7f0db2e.webp"],

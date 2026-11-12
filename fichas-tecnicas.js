@@ -1122,7 +1122,7 @@ const FICHAS_TECNICAS = {
       "Conexión Bluetooth y seis bocinas",
       "Iluminación LED y rines de 16 pulgadas",
     ],
-    note: "Referencia oficial de lanzamiento para Comfortline 2019. Confirma el equipo instalado y el kilometraje de esta unidad con el asesor.",
+    note: "Referencia oficial de lanzamiento para Comfortline 2019. Confirma el equipo instalado en esta unidad con el asesor.",
   },
   353: {
     source:
