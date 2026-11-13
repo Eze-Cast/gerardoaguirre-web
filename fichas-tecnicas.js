@@ -11,7 +11,7 @@ const FICHAS_TECNICAS = {
     passengers: "5",
     trunk: "510 L",
     tank: "50 L",
-    dimensions: "4,758 × 1,799 × 1,459 mm",
+    dimensions: "4,736 × 1,799 × 1,459 mm",
     source:
       "https://www.vw.com.mx/idhub/content/dam/onehub_pkw/importers/mx/fichas-tecnicas/producto/2024/jetta/vw-ficha-tecnica-jetta-24.pdf",
     safety: [
@@ -1203,5 +1203,31 @@ const FICHAS_TECNICAS = {
       "Vestiduras de piel sintética",
     ],
     note: "Catálogo oficial de la gama mexicana Intens CVT. Confirma la correspondencia del equipamiento con esta unidad modelo 2024.",
+  },
+  1301: {
+    engine: "1.4 L TSI turbo · 4 cilindros",
+    power: "150 hp a 5,400 rpm",
+    torque: "250 Nm a 2,000 rpm",
+    gearbox: "Tiptronic · 6 velocidades",
+    drive: "Delantera",
+    fuel: "Gasolina",
+    passengers: "5",
+    trunk: "510 L",
+    tank: "50 L",
+    dimensions: "4,736 × 1,799 × 1,459 mm",
+    source:
+      "https://www.vw.com.mx/idhub/content/dam/onehub_pkw/importers/mx/fichas-tecnicas/producto/2024/jetta/vw-ficha-tecnica-jetta-24.pdf",
+    safety: [
+      "Bolsas de aire frontales, laterales y de cortina",
+      "Control de estabilidad y tracción",
+      "Anclajes ISOFIX",
+    ],
+    equipment: [
+      "Faros principales LED",
+      "Rines de acero de 16 pulgadas con tapones",
+      "Pantalla táctil de 6.5 pulgadas y cuatro bocinas",
+      "Volkswagen App-Connect y Bluetooth",
+      "Aire acondicionado y control de crucero",
+    ],
   },
 };
